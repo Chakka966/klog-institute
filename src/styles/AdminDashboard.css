@@ -1,0 +1,70 @@
+.admin-container {
+  min-height: 100vh;
+  background: #f4f6fb;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h2 {
+  color: #1e2a3a;
+}
+
+.logout-btn {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 450px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.form-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-card button {
+  width: 100%;
+  padding: 10px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.course-table {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.course-table th {
+  background: #1e88e5;
+  color: white;
+  padding: 12px;
+}
+
+.course-table td {
+  padding: 10px;
+  text-align: center;
+}
