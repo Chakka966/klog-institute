@@ -189,3 +189,44 @@
   font-size: 14px;
   opacity: 0.8;
 }
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stat-box {
+    width: 100%;
+  }
+
+  .testimonial-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+
+  .cta h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}

@@ -68,3 +68,25 @@
   padding: 10px;
   text-align: center;
 }
+@media (max-width: 768px) {
+
+  .admin-container {
+    padding: 10px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .form-card form {
+    grid-template-columns: 1fr;
+  }
+
+  .course-table {
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+  }
+}
