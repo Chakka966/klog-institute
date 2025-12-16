@@ -2,43 +2,57 @@
   font-family: Arial, sans-serif;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  padding: 80px 20px;
+  position: relative;
+  height: 100vh;              /* Full screen hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Slideshow goes behind */
+.slideshow-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* Text on top of slideshow */
+.hero-content {
+  position: relative;
+  z-index: 2;
   text-align: center;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin: 15px 0;
-}
-
-.hero-buttons button {
-  margin: 10px;
-  padding: 12px 25px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.hero-buttons .outline {
-  background: transparent;
   color: white;
-  border: 2px solid white;
+  padding: 20px;
 }
 
-.hero-buttons button:hover {
-  opacity: 0.9;
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
 }
 
-/* ABOUT */
+.hero-content p {
+  font-size: 1.4rem;
+}
+
+/* ================= ABOUT ================= */
 .about {
   padding: 60px 20px;
   text-align: center;
@@ -60,9 +74,10 @@
 .stat-box h3 {
   font-size: 32px;
   color: #2c5364;
+  transition: all 0.3s ease;
 }
 
-/* COURSES */
+/* ================= COURSES ================= */
 .courses {
   background: #fafafa;
   padding: 60px 20px;
@@ -87,7 +102,7 @@
   color: #203a43;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 .cta {
   background: #203a43;
   color: white;
@@ -103,35 +118,8 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.why-choose {
-  text-align: center;
-  padding: 80px 20px;
-}
 
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.stat-card {
-  background: #f7f7f7;
-  padding: 30px;
-  border-radius: 12px;
-  width: 220px;
-  text-align: center;
-}
-
-.stat-card h3 {
-  font-size: 32px;
-  color: #1e4d5c;
-  margin-bottom: 10px;
-}
-.stat-box h3 {
-  transition: all 0.3s ease;
-}
-/* TESTIMONIALS */
+/* ================= TESTIMONIALS ================= */
 .testimonials {
   padding: 70px 20px;
   background: #f4f8fb;
@@ -160,45 +148,43 @@
 .testimonial-card h4 {
   color: #203a43;
 }
-/* FOOTER */
+
+/* ================= FOOTER ================= */
 .footer {
   background: #0f2b33;
   color: white;
   padding: 40px 20px 20px;
 }
 
-/* Center the footer content properly */
 .footer-content {
-  max-width: 1100px;      /* keeps it centered */
-  margin: 0 auto;         /* CENTER */
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
 }
 
-/* Footer columns */
 .footer-content div {
   min-width: 200px;
 }
 
-/* Bottom copyright */
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
   font-size: 14px;
   opacity: 0.8;
 }
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-  .hero h1 {
+  .hero-content h1 {
     font-size: 28px;
-    text-align: center;
   }
 
-  .hero p {
+  .hero-content p {
     font-size: 16px;
-    text-align: center;
   }
 
   .stats {
@@ -208,20 +194,6 @@
 
   .stat-box {
     width: 100%;
-  }
-
-  .testimonial-list {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .testimonial-card {
-    width: 100%;
-  }
-
-  .cta h2 {
-    font-size: 22px;
-    text-align: center;
   }
 
   .footer-content {

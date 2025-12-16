@@ -2,12 +2,13 @@ import React from "react";
 import "./Home.css";
 import Navbar from "../components/Navbar";
 
+
 function Home() {
   return (
     <>
       {/* NAVBAR */}
       <Navbar />
-
+      
       <div className="home">
 
         {/* HERO SECTION */}

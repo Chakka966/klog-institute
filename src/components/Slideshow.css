@@ -1,0 +1,30 @@
+.slideshow-container {
+  width: 100%;
+  height: 60vh;        /* use 100vh if you want full screen */
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;   /* IMPORTANT */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Show only active image */
+.slideshow-container img.active {
+  opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slideshow img {
+    height: 220px;
+  }
+}
+
